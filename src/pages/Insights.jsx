@@ -130,10 +130,34 @@ function Insights() {
 
     catch (error) {
 
-      console.log(error);
+  console.log(error);
 
-    }
+  let insight = "";
 
+  if (totalSpent > 5000) {
+
+    insight =
+      "Your spending is relatively high this month. Consider reducing unnecessary lifestyle expenses.";
+
+  }
+
+  else if (totalSpent > 2000) {
+
+    insight =
+      "Your spending pattern is balanced, but food and entertainment expenses are increasing.";
+
+  }
+
+  else {
+
+    insight =
+      "Your spending habits appear controlled and financially healthy.";
+
+  }
+
+  setAiInsight(insight);
+
+}
   };
 
   /* CATEGORY ANALYSIS */
